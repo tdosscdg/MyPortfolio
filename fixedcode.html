@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Image Code</title>
+<style>
+ body{
+background-image: url(https://images.pexels.com/photos/20337609/pexels-photo-20337609/free-photo-of-saturn-planet-and-rings.jpeg); 
+background-size: cover; 
+background-repeat: no-repeat; 
+font-family: "Courier New", monospace; 
+color: white; 
+text-align: center;}
+
+.image-container{margin-top: 10px; font-size: 24px}
+
+img{ max-width: 80%; height: auto; border: 2px solid white; margin-top: 10px;}
+
+.nav-buttons{ margin-top: 20px;}
+
+.button{ 
+background-color: #001861; 
+color: white; 
+padding: 12px 28px; 
+border-radius: 8px; 
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+margin: 5px; 
+font-size: 20px; 
+text-align: center; 
+outline: none;
+border: none;
+display: inline-block; 
+cursor: pointer;}
+
+.button:hover {background-color: #bfcfff;}
+
+.button:active {background-color: #001861; box-shadow: 0 5px #bfcfff; transform: translateY(4px);}
+
+</style>
+</head>
+
+<body>
+<h1>My Image Showcase</h1>
+<h2>Click the buttons to view each image!</h2>
+
+<div class="nav-buttons">
+<button class="button" onclick="showImage('external')">External Image</button>
+<button class="button" onclick="showImage('embedded')">My Collage Image</button>
+<button class="button" onclick="showImage('background')">Background Image</button>
+</div>
+
+<div class="image-container">
+  <p id="caption">Click a button to show an image</p>
+  <img id="displayed-image" src="" alt="" />
+</div>
+
+<script>
+function showImage(type) {
+  const img = document.getElementById('displayed-image');
+
+  if (type === 'external') {
+    img.src = 'https://cdn12.picryl.com/photo/2016/12/31/saturn-planet-saturns-rings-749232-1024.jpg';
+    img.alt = 'External royalty-free image of Saturn.';
+  }
+
+  if (type === 'embedded') {
+    img.src = 'file:///Users/alexispeak/Downloads/my-image.jpeg';
+    img.alt = 'A collage I made of the planet Saturn.';
+  }
+
+  if (type === 'background') {
+    img.src = 'https://images.pexels.com/photos/20337609/pexels-photo-20337609/free-photo-of-saturn-planet-and-rings.jpeg';
+    img.alt = 'The background image.';
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Contact Me</title>
+<style>
+body {
+font-family: "Courier New", monospace;
+background-color: #CCCCFF;
+text-align: center;
+padding: 40px;}
+
+h1 {color: #191970;}
+
+form {
+background-color: #CCCCFF;
+padding: 20px;
+width: 300px:
+margin: auto;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);}
+
+fieldset {
+border: 2px solid #191970;
+padding: 15px;
+border-radius: 8px;}
+
+legend {
+display: block;
+margin-top: 10px;
+text-align: left;}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+width: 100%;
+padding: 8px;
+margin-top: 5px;
+border: 1px solid white;
+border-radius: 5px;}
+
+input[type="submit"] {
+margin-top: 15px;
+background-color: #191970;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 6px;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+cursor: pointer;
+font-size: 16px;}
+
+input[type="submit"]:hover {background-color: #CCCCFF;}
+input[type="submit"]:active {background-color: #00008B; box-shadow: 0 5px #666; transform: translateY(4px);}
+audio {margin-top: 30px;}
+  </style>
+</head>
+<body>
+
+  <h1>Contact Me</h1>
+  <p>Feel free to send me a message! Fill out the form below, and I’ll get back to you as soon as possible.</p>
+
+  <form action="/my-form-info.php" method="post">
+    <fieldset>
+      <legend>Contact Information</legend>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Telephone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <input type="submit" value="Send Message">
+    </fieldset>
+  </form>
+
+  <audio controls autoplay loop>
+    <source src="my-audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+</body>
+</html>
